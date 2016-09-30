@@ -13,4 +13,5 @@ source("../Documents/LATEV/bridging/plots.R")
 source("../Documents/LATEV/bridging/cleanup.R")
 
 qual.cutoff <- 2
+quant.log <- FALSE
 quant.results
