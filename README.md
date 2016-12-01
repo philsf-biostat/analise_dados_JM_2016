@@ -29,3 +29,9 @@ Minimizar o Ct
 
 ## Comparação de Métodos ##
 
+Análise estatística da validação entre os métodos:
+
+- PCR
+- Titulação
+
+Mesmas amostras, mesmas diluições, em duplicata.
