@@ -1,7 +1,7 @@
 df <- read.csv2("dataset/DadosCaxumba.csv")
 attach(df)
 
-png("ct-4-graphs.png", 700, 700)
+png("figuras/ct-4-graphs.png", 700, 700)
 par(mfrow = c(2,2))
 
 plot(CS.DILUIDO ~ Cx, xlim=c(0,40), ylim=c(0,40))
