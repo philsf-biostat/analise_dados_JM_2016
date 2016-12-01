@@ -1,6 +1,9 @@
 df <- read.csv2("dataset/DadosCaxumba.csv")
 attach(df)
 
+# Objetivo: observar o ajuste do virus puro com as combinações biplex.
+# Critério: R^2
+
 png("figuras/ct-4-graphs.png", 700, 700)
 par(mfrow = c(2,2))
 
