@@ -34,4 +34,4 @@ Análise estatística da validação entre os métodos:
 - PCR
 - Titulação
 
-Mesmas amostras, mesmas diluições, em duplicata.
+Mesmas amostras, mesmas diluições, em quadruplicata (2 cinética A, 2 cinética B).
