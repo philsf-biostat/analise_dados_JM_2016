@@ -22,4 +22,5 @@ source("../Documents/LATEV/bridging/cleanup.R")
 
 qual.cutoff <- 2
 quant.log <- FALSE
-quant.results
+round(quant.results, 2)
+qual.results
