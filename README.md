@@ -35,3 +35,12 @@ Análise estatística da validação entre os métodos:
 - Titulação
 
 Mesmas amostras, mesmas diluições, em quadruplicata (2 cinética A, 2 cinética B).
+
+### Gráficos ###
+
+- Dotplots do Ct (ou alternativa)
+    - 2x2 Caxumba, 2 Rubeola, 2 Sarampo
+    - Puro x Concentrado/Diluido
+- Regressão (Deming) das Quantidades (MC)
+    - cinética A, cinética B, pool das cinéticas
+    - Bland-Altman?
