@@ -38,8 +38,8 @@ Mesmas amostras, mesmas diluições, em quadruplicata (2 cinética A, 2 cinétic
 
 ### Gráficos ###
 
-- Dotplots do Ct (ou alternativa)
-    - 2x2 Caxumba, 2 Rubeola, 2 Sarampo
+- ~~Dotplots~~ Regressão Simples do Ct ~~(ou alternativa)~~
+    - ~~2x2 Caxumba, 2 Rubeola, 2 Sarampo~~ (07/12/2016)
     - ~~Puro x Concentrado/Diluido~~ (07/12/2016)
 - Regressão (Deming) das Quantidades (MC)
     - cinética A, cinética B, ~~pool das cinéticas~~ (07/12/2016)
