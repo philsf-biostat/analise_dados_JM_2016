@@ -20,7 +20,7 @@ rm(r2)
 plot(CS.CONCENTRADO ~ Cx, xlim=c(0,40), ylim=c(0,40),
      xlab = "Ct Caxumba (puro)",
      ylab = "Ct Caxumba + Sarampo",
-     main = "Mix qPCR Diluído")
+     main = "Mix qPCR Concentrado")
 cx.cs.conc <- lm(CS.CONCENTRADO ~ Cx)
 abline(cx.cs.conc)
 r2 <- paste('R^2 =', round(summary(cx.cs.conc)$r.squared, 4))
@@ -40,7 +40,7 @@ rm(r2)
 plot(CR.CONCENTRADO ~ Cx, xlim=c(0,40), ylim=c(0,40),
      xlab = "Ct Caxumba (puro)",
      ylab = "Ct Caxumba + Rubéola",
-     main = "Mix qPCR Diluído")
+     main = "Mix qPCR Concentrado")
 cx.cr.conc <- lm(CR.CONCENTRADO ~ Cx)
 abline(cx.cr.conc)
 r2 <- paste('R^2 =', round(summary(cx.cr.conc)$r.squared, 4))
