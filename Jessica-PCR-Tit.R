@@ -42,3 +42,7 @@ title("Regressão Linear Simples")
 dev.off()
 
 detach()
+
+df <- subset(df, Metodo == 'qPCR')
+mcdf <- Meth(df, meth = "Cinetica", y = "Quantidade", item = "Coleta")
+levels(mcdf$meth) <- list(REF = "A", NEW = "B")
