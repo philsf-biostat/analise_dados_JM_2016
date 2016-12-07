@@ -23,3 +23,20 @@ qual.cutoff <- 2
 quant.log <- FALSE
 round(quant.results, 2)
 qual.results
+
+attach(wmcdf)
+png("figuras/analises2-full.png", width = 1200, height = 700)
+
+attach(wmcdf.dp)
+png("figuras/analises2-incompleto.png", width = 1200, height = 700)
+
+par(mfrow = c(1,2))
+plot(NEW ~ REF, xlab = "Titulacao", ylab = "qPCR", sub = "Caxumba (MOI 0,01)", xlim = c(0,5), ylim = c(4.5, 9.5))
+abline(dem.model[1:2], lwd = 2, col = "green")
+title("Regressão de Deming")
+plot(NEW ~ REF, xlab = "Titulacao", ylab = "qPCR", sub = "Caxumba (MOI 0,01)", xlim = c(0,5), ylim = c(4.5, 9.5))
+abline(lm(NEW ~ REF), lwd= 1, col = "red")
+title("Regressão Linear Simples")
+dev.off()
+
+detach()
