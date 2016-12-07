@@ -7,14 +7,18 @@ attach(df)
 png("figuras/ct-rubeola.png", 700, 350)
 par(mfrow = c(1,2))
 
-plot(CR.DILUIDO ~ Rp, xlim=c(0,40), ylim=c(0,40))
+plot(CR.DILUIDO ~ Rp, xlim=c(0,40), ylim=c(0,40),
+     xlab = "Rubéola (puro)",
+     ylab = "Caxumba + Rubéola diluído")
 rp.cs.dil <- lm(CR.DILUIDO ~ Rp)
 abline(rp.cs.dil)
 r2 <- paste('R^2 =', round(summary(rp.cs.dil)$r.squared, 4))
 text(15,2, r2)
 rm(r2)
 
-plot(CR.CONCENTRADO ~ Rp, xlim=c(0,40), ylim=c(0,40))
+plot(CR.CONCENTRADO ~ Rp, xlim=c(0,40), ylim=c(0,40),
+     xlab = "Rubéola (puro)",
+     ylab = "Caxumba + Rubéola diluído")
 rp.cs.conc <- lm(CR.CONCENTRADO ~ Rp)
 abline(rp.cs.conc)
 r2 <- paste('R^2 =', round(summary(rp.cs.conc)$r.squared, 4))
