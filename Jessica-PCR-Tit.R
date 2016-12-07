@@ -7,10 +7,9 @@
 
 library(xlsx)
 
-df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1)
+df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1) # Sarampo MOI 0.01
 
-df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 3)
-
+df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 3) # Caxumba MOI 0.01
 
 library(MethComp)
 mcdf <- Meth(df, meth = "Metodo", y = "Quantidade", item = "Coleta")
