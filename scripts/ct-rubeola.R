@@ -4,7 +4,7 @@ attach(df)
 # Objetivo: observar o ajuste do virus puro com as combinações biplex.
 # Critério: R^2
 
-png("figuras/ct-4-graphs.png", 700, 350)
+png("figuras/ct-rubeola.png", 700, 350)
 par(mfrow = c(1,2))
 
 plot(CR.DILUIDO ~ Rp, xlim=c(0,40), ylim=c(0,40))
