@@ -11,8 +11,9 @@ df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1) # Sarampo MOI 0.01
 
 df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 3) # Caxumba MOI 0.01
 
-# qual.cutoff <- 2
-quant.log <- FALSE
+df$Quantidade <- 10^df$Quantidade
+qual.cutoff <- 10
+# quant.log <- FALSE
 
 library(MethComp)
 mcdf <- Meth(df, meth = "Metodo", y = "Quantidade", item = "Coleta")
