@@ -11,6 +11,9 @@ df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1) # Sarampo MOI 0.01
 
 df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 3) # Caxumba MOI 0.01
 
+# qual.cutoff <- 2
+quant.log <- FALSE
+
 library(MethComp)
 mcdf <- Meth(df, meth = "Metodo", y = "Quantidade", item = "Coleta")
 # mcdf <- Meth(df, meth = "Metodo", y = "Stuff.log", item = "Coleta")
@@ -19,8 +22,6 @@ source("../Documents/LATEV/bridging/bridging-analysis.R")
 source("../Documents/LATEV/bridging/plots.R")
 source("../Documents/LATEV/bridging/cleanup.R")
 
-qual.cutoff <- 2
-quant.log <- FALSE
 round(quant.results, 2)
 qual.results
 
