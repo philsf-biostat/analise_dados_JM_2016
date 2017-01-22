@@ -14,7 +14,8 @@ myplot <- function(x, y, xlim = NULL, ylim = NULL, xlab = NULL, ylab = NULL) {
        xlab = xlab,
        ylab = ylab,
        )
-  abline(modelo)
+  abline(modelo,
+         )
   text(23,15, eqn)
   text(25, 12, r2)
 }
