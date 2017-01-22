@@ -8,10 +8,11 @@ myplot <- function(x, y, xlim = NULL, ylim = NULL, xlab = NULL, ylab = NULL) {
   coefs <- round(modelo$coefficients, 4)
   eqn <- paste(y.name,"=",coefs[2],x.name,"+",coefs[1])
 
-  plot(y ~ x, xlim = xlim, ylim = ylim,
+  plot(y ~ x,
+       xlim = xlim,
+       ylim = ylim,
        xlab = xlab,
        ylab = ylab,
-       # main = "Mix qPCR Diluído"
        )
   abline(modelo)
   text(23,15, eqn)
