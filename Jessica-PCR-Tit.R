@@ -7,10 +7,10 @@
 
 library(xlsx)
 
-Sp001 <- read.xlsx("Dados brutos/Dados Dissertação Jéssica - Para Felipe.xlsx", "SARAMPO MOI 0,01")
-Sp0001 <- read.xlsx("Dados brutos/Dados Dissertação Jéssica - Para Felipe.xlsx", "SARAMPO MOI 0,001")
-Cx001 <- read.xlsx("Dados brutos/Dados Dissertação Jéssica - Para Felipe.xlsx", "CAXUMBA MOI 0,01")
-Cx0001 <- read.xlsx("Dados brutos/Dados Dissertação Jéssica - Para Felipe.xlsx", "CAXUMBA MOI 0,001")
+Sp001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "SARAMPO MOI 0,01")
+Sp0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "SARAMPO MOI 0,001")
+Cx001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,01")
+Cx0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,001")
 
 with(Sp001, myplot(Titulação, qPCR))
 with(Sp0001, myplot(Titulação, qPCR))
