@@ -5,7 +5,7 @@ source("scripts/myplot.R")
 # Objetivo: observar o ajuste do virus puro com as combinações biplex.
 # Critério: R^2
 
-png("figuras/ct-sarampo.png", 700, 350)
+png("figuras/ct-sarampo.png", 1000, 500)
 par(mfrow = c(1,2))
 
 with(df, myplot(Sp, CS.DILUIDO, xlim=c(0,40), ylim=c(0,40),
