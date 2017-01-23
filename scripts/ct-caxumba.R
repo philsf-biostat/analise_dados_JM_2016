@@ -1,3 +1,4 @@
+rm(list = ls())
 df <- read.csv2("dataset/DadosCaxumba.csv")
 source("scripts/myplot.R")
 
