@@ -19,6 +19,5 @@ myplot <- function(x, y, xlim = NULL, ylim = NULL, xlab = NULL, ylab = NULL, dig
          lwd = 1.5,
          lty = 5,
          )
-  text(30, 14, eqn, col = ols.col, adj = 1)
-  text(30, 13, r2, col = ols.col, adj = 1)
+  legend("bottomright",paste0(eqn,"\n",r2))
 }
