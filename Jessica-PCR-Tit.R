@@ -26,6 +26,12 @@ title("Sarampo MOI 0,01")
 mtext("Cinética: pool")
 
 ## Sarampo MOI 0,001 ####
+with(Sp0001[Cinetica == "A"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Sarampo MOI 0,001")
+mtext("Cinética: A")
+with(Sp0001[Cinetica == "B"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Sarampo MOI 0,001")
+mtext("Cinética: B")
 with(Sp0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
 title("Sarampo MOI 0,001")
 mtext("Cinética: pool")
