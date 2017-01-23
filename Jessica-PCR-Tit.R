@@ -15,6 +15,12 @@ Sp0001 <- as.data.table(Sp0001)
 Cx001 <- as.data.table(Cx001)
 Cx0001 <- as.data.table(Cx0001)
 
+## retirando títulos nulos ####
+Sp001 <- Sp001[Titulacao!=0,]
+Sp0001 <- Sp0001[Titulacao!=0,]
+Cx001 <- Cx001[Titulacao!=0,]
+Cx0001 <- Cx0001[Titulacao!=0,]
+
 ## Sarampo MOI 0,01 ####
 png("figuras/mc_sp_001_AB.png", 1000, 500)
 par(mfrow = c(1,2))
