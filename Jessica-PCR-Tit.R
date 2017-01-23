@@ -1,4 +1,5 @@
 ## setup ####
+rm(list = ls())
 library(xlsx)
 library(data.table)
 
