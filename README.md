@@ -41,6 +41,18 @@ Mesmas amostras, mesmas diluições, em quadruplicata (2 cinética A, 2 cinétic
 - ~~Dotplots~~ Regressão Simples do Ct ~~(ou alternativa)~~
     - ~~2x2 Caxumba, 2 Rubeola, 2 Sarampo~~ (07/12/2016)
     - ~~Puro x Concentrado/Diluido~~ (07/12/2016)
-- Regressão (Deming) das Quantidades (MC)
-    - cinética A, cinética B, ~~pool das cinéticas~~ (07/12/2016)
-    - Bland-Altman?
+- ~~ Comparação de métodos: Regressão simples das Quantidades~~
+    - ~~cinética A, cinética B, pool das cinéticas~~ (22/01/2017)
+
+## Metodologia ##
+
+Os dados ajustados com modelos de regressão linear simples, que foram comparados de acordo com o coeficiente de determinação (R^2) de cada modelo.
+Quanto maior o valor de R^2, melhor é o ajuste do modelo aos dados.
+
+As amostras com títulos nulos não foram considerados para os modelos de regressão.
+
+Os modelos obtidos foram apresentados, bem como os coeficientes de determinação foram apresentados em cada gráfico.
+
+Figuras compostas por mais de um gráfico têm escalas iguais, para facilitar a comparação dos resultados.
+
+Todas as análises estatísticas foram feitas usando o software R, versão 3.3.2.
