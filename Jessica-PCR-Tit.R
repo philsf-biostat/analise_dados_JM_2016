@@ -15,6 +15,12 @@ Cx001 <- as.data.table(Cx001)
 Cx0001 <- as.data.table(Cx0001)
 
 ## Sarampo MOI 0,01 ####
+with(Sp001[Cinetica == "A"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Sarampo MOI 0,01")
+mtext("Cinética: A")
+with(Sp001[Cinetica == "B"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Sarampo MOI 0,01")
+mtext("Cinética: B")
 with(Sp001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
 title("Sarampo MOI 0,01")
 mtext("Cinética: pool")
