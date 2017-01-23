@@ -1,48 +1,84 @@
-# library(xlsx)
-# df <- read.xlsx("PCRxTITULACAO.xlsx",1)
-# write.csv2(df[c(1,4,3)], "PCRxTITULACAO.csv", row.names = F)
-# write.csv2(df, "PCRxTITULACAO.csv", row.names = F)
-
-# df <- read.csv2("PCRxTITULACAO.csv")
-
+## setup ####
+rm(list = ls())
 library(xlsx)
+library(data.table)
 
-df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1) # Sarampo MOI 0.01
+source("scripts/myplot.R")
 
-df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 3) # Caxumba MOI 0.01
+## input ####
+Sp001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "SARAMPO MOI 0,01")
+Sp0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "SARAMPO MOI 0,001")
+Cx001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,01")
+Cx0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,001")
+Sp001 <- as.data.table(Sp001)
+Sp0001 <- as.data.table(Sp0001)
+Cx001 <- as.data.table(Cx001)
+Cx0001 <- as.data.table(Cx0001)
 
-df$Quantidade <- 10^df$Quantidade
-qual.cutoff <- 10
-# quant.log <- FALSE
-
-library(MethComp)
-mcdf <- Meth(df, meth = "Metodo", y = "Quantidade", item = "Coleta")
-# mcdf <- Meth(df, meth = "Metodo", y = "Stuff.log", item = "Coleta")
-levels(mcdf$meth) <- list(REF = "Titulacao", NEW = "qPCR")
-source("../Documents/LATEV/bridging/bridging-analysis.R")
-source("../Documents/LATEV/bridging/plots.R")
-source("../Documents/LATEV/bridging/cleanup.R")
-
-round(quant.results, 2)
-qual.results
-
-attach(wmcdf)
-png("figuras/analises2-full.png", width = 1200, height = 700)
-
-attach(wmcdf.dp)
-png("figuras/analises2-incompleto.png", width = 1200, height = 700)
-
+## Sarampo MOI 0,01 ####
+png("figuras/mc_sp_001_AB.png", 1000, 500)
 par(mfrow = c(1,2))
-plot(NEW ~ REF, xlab = "Titulacao", ylab = "qPCR", sub = "Caxumba (MOI 0,01)", xlim = c(0,5), ylim = c(4.5, 9.5))
-abline(dem.model[1:2], lwd = 2, col = "green")
-title("Regressão de Deming")
-plot(NEW ~ REF, xlab = "Titulacao", ylab = "qPCR", sub = "Caxumba (MOI 0,01)", xlim = c(0,5), ylim = c(4.5, 9.5))
-abline(lm(NEW ~ REF), lwd= 1, col = "red")
-title("Regressão Linear Simples")
+with(Sp001[Cinetica == "A"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,7), ylim = c(5,11) ))
+title("Sarampo MOI 0,01")
+mtext("Cinética: A")
+with(Sp001[Cinetica == "B"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,7), ylim = c(5,11) ))
+title("Sarampo MOI 0,01")
+mtext("Cinética: B")
 dev.off()
 
-detach()
+png("figuras/mc_sp_001_pool.png", 600, 600)
+with(Sp001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,7), ylim = c(5,11) ))
+title("Sarampo MOI 0,01")
+mtext("Cinética: pool")
+dev.off()
 
-df <- subset(df, Metodo == 'qPCR')
-mcdf <- Meth(df, meth = "Cinetica", y = "Quantidade", item = "Coleta")
-levels(mcdf$meth) <- list(REF = "A", NEW = "B")
+## Sarampo MOI 0,001 ####
+png("figuras/mc_sp_0001_AB.png", 1000, 500)
+par(mfrow = c(1,2))
+with(Sp0001[Cinetica == "A"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,7), ylim = c(5,11) ))
+title("Sarampo MOI 0,001")
+mtext("Cinética: A")
+with(Sp0001[Cinetica == "B"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,7), ylim = c(5,11) ))
+title("Sarampo MOI 0,001")
+mtext("Cinética: B")
+dev.off()
+
+png("figuras/mc_sp_0001_pool.png", 600, 600)
+with(Sp0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,7), ylim = c(5,11) ))
+title("Sarampo MOI 0,001")
+mtext("Cinética: pool")
+dev.off()
+
+## Caxumba MOI 0,01 ####
+png("figuras/mc_cx_001_AB.png", 1000, 500)
+par(mfrow = c(1,2))
+with(Cx001[Cinetica == "A"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,5), ylim = c(4,10) ))
+title("Caxumba MOI 0,01")
+mtext("Cinética: A")
+with(Cx001[Cinetica == "B"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,5), ylim = c(4,10) ))
+title("Caxumba MOI 0,01")
+mtext("Cinética: B")
+dev.off()
+
+png("figuras/mc_cx_001_pool.png", 600, 600)
+with(Cx001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,5), ylim = c(4,10) ))
+title("Caxumba MOI 0,01")
+mtext("Cinética: pool")
+dev.off()
+
+## Caxumba MOI 0,001 ####
+png("figuras/mc_cx_0001_AB.png", 1000, 500)
+par(mfrow = c(1,2))
+with(Cx0001[Cinetica == "A"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,5), ylim = c(4,11) ))
+title("Caxumba MOI 0,001")
+mtext("Cinética: A")
+with(Cx0001[Cinetica == "B"], myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,5), ylim = c(4,11) ))
+title("Caxumba MOI 0,001")
+mtext("Cinética: B")
+dev.off()
+
+png("figuras/mc_cx_0001_pool.png", 600, 600)
+with(Cx0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)", xlim = c(0,5), ylim = c(4,11) ))
+title("Caxumba MOI 0,001")
+mtext("Cinética: pool")
+dev.off()
