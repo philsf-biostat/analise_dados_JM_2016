@@ -16,12 +16,16 @@ Cx0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,001")
 
 with(Sp001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
 title("Sarampo MOI 0,01")
+mtext("Cinética: pool")
 with(Sp0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
 title("Sarampo MOI 0,001")
+mtext("Cinética: pool")
 with(Cx001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
 title("Caxumba MOI 0,01")
+mtext("Cinética: pool")
 with(Cx0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
 title("Caxumba MOI 0,001")
+mtext("Cinética: pool")
 
 
 df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1) # Sarampo MOI 0.01
