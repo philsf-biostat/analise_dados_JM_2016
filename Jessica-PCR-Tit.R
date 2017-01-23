@@ -7,15 +7,21 @@
 
 library(xlsx)
 
+source("scripts/myplot.R")
+
 Sp001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "SARAMPO MOI 0,01")
 Sp0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "SARAMPO MOI 0,001")
 Cx001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,01")
 Cx0001 <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", "CAXUMBA MOI 0,001")
 
-with(Sp001, myplot(Titulação, qPCR))
-with(Sp0001, myplot(Titulação, qPCR))
-with(Cx001, myplot(Titulação, qPCR))
-with(Cx0001, myplot(Titulação, qPCR))
+with(Sp001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Sarampo MOI 0,01")
+with(Sp0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Sarampo MOI 0,001")
+with(Cx001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Caxumba MOI 0,01")
+with(Cx0001, myplot(Titulacao, qPCR, xlab = "Titulação (log10 PFU/mL)", ylab = "qPCR (log10 cópias/mL)"))
+title("Caxumba MOI 0,001")
 
 
 df <- read.xlsx("dataset/Dados_PCR_Tit.xlsx", 1) # Sarampo MOI 0.01
