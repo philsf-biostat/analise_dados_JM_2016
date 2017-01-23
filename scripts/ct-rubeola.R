@@ -1,5 +1,4 @@
 df <- read.csv2("dataset/DadosRubeola.csv")
-attach(df)
 source("scripts/myplot.R")
 
 # Objetivo: observar o ajuste do virus puro com as combinações biplex.
@@ -19,5 +18,3 @@ with(df, myplot(Rp, CR.CONCENTRADO, xlim=c(0,40), ylim=c(0,40),
 title(main = "Mix qPCR Concentrado")
 
 dev.off()
-
-detach(df)
