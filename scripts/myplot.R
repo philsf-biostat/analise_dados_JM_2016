@@ -16,7 +16,7 @@ myplot <- function(x, y, xlim = NULL, ylim = NULL, xlab = NULL, ylab = NULL, dig
        )
   abline(modelo,
          col = ols.col,
-         lwd = 1.5,
+         lwd = 1.3,
          lty = 5,
          )
   legend("bottomright",paste0(eqn,"\n",r2))
