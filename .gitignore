@@ -277,3 +277,4 @@ flycheck_*.el
 
 # projectiles files
 .projectile
+dataset/
