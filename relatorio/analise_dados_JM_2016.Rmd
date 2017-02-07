@@ -29,14 +29,6 @@ Todas as análises estatísticas foram feitas usando o software R, versão 3.3.2
 
 ## Resultados ##
 
-### Ct ###
-
-![Ct Caxumba](../figuras/ct-caxumba.png)
-
-![Ct Rubéola](../figuras/ct-rubeola.png)
-
-![Ct Sarampo](../figuras/ct-sarampo.png)
-
 ### qPCR x Titulação ###
 
 #### Tabela ####
@@ -60,5 +52,10 @@ Table: **Tabela 1** Média das diferenças entre qPCR e Titulação, intervalo d
 
 ![](../figuras/mc_sp_0001_pool.png)
 
+### Ct ###
 
+![Ct Caxumba](../figuras/ct-caxumba.png)
 
+![Ct Rubéola](../figuras/ct-rubeola.png)
+
+![Ct Sarampo](../figuras/ct-sarampo.png)
