@@ -11,21 +11,21 @@ par(mfrow = c(2,2))
 with(df, myplot(Cx, CS.DILUIDO, xlim=c(10,30), ylim=c(0,40),
        xlab = "Ct Caxumba (puro)",
        ylab = "Ct Caxumba + Sarampo") )
-title(main = "Mix qPCR Diluído")
+title(main = "Mistura Diluída")
 
 with(df, myplot(Cx, CS.CONCENTRADO, xlim=c(10,30), ylim=c(0,40),
      xlab = "Ct Caxumba (puro)",
      ylab = "Ct Caxumba + Sarampo") )
-title(main = "Mix qPCR Concentrado")
+title(main = "Mistura Concentrada")
 
 with(df, myplot(Cx, CR.DILUIDO, xlim=c(10,30), ylim=c(0,40),
                 xlab = "Ct Caxumba (puro)",
                 ylab = "Ct Caxumba + Rubéola"))
-title(main = "Mix qPCR Diluído")
+title(main = "Mistura Diluída")
 
 with(df, myplot(Cx, CR.CONCENTRADO, xlim=c(10,30), ylim=c(0,40),
                 xlab = "Ct Caxumba (puro)",
                 ylab = "Ct Caxumba + Rubéola"))
-title(main = "Mix qPCR Concentrado")
+title(main = "Mistura Concentrada")
 
 dev.off()
