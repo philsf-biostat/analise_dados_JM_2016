@@ -1,16 +1,6 @@
----
-title: "Análise de dados - Jéssica Malheiros"
-author: "Felipe Figueiredo"
-date: "February 6, 2017"
-output:
-  html_document:
-    toc: yes
-  pdf_document:
-    toc: yes
-  word_document:
-    keep_md: yes
-    toc: yes
----
+# Análise de dados - Jéssica Malheiros
+Felipe Figueiredo  
+February 6, 2017  
 
 # Análise de dados Jéssica Malheiros
 
