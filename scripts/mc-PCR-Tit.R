@@ -88,3 +88,12 @@ with(Cx0001, myplot(qPCR, Titulacao, ylab = "Titulação (log10 PFU/mL)", xlab =
 title("Caxumba MOI 0,001")
 mtext("Cinética: pool")
 dev.off()
+
+source("scripts/mysummary.R")
+library(pander)
+
+tabela <- rbind(mysummary(Cx001),
+                mysummary(Cx0001),
+                mysummary(Sp001),
+                mysummary(Sp0001))
+pander(tabela)
